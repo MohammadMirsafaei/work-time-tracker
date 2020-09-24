@@ -15,6 +15,14 @@ class CreateProjectsTable extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
+            $table->string('name', 200);
+            $table->integer('pay_per_hour')->default(0);
+            $table->bigInteger('company_id')->unsigned();
+            $table->foreign('company_id')
+                        ->on('companies')
+                        ->references('id')
+                        ->onDelete('cascade')
+                        ->onUpdate('cascade');
             $table->timestamps();
         });
     }

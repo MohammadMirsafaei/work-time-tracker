@@ -22,7 +22,8 @@ class CompanyFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->company,
+            'user_id' => 1
         ];
     }
 }

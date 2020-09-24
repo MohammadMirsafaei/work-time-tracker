@@ -22,7 +22,8 @@ class ProjectFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->company,
+            'pay_per_hour' => $this->faker->random_int(15000,35000)
         ];
     }
 }

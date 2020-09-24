@@ -15,6 +15,14 @@ class CreateExtraWorksTable extends Migration
     {
         Schema::create('extra_works', function (Blueprint $table) {
             $table->id();
+            $table->string('name', 200);
+            $table->integer('pay_per_item')->default(0);
+            $table->integer('project_id');
+            $table->foreign('project_id')
+                        ->on('projects')
+                        ->references('id')
+                        ->onDelete('cascade')
+                        ->onUpdate('cascade');
             $table->timestamps();
         });
     }
