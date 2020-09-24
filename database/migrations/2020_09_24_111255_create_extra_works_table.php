@@ -17,7 +17,7 @@ class CreateExtraWorksTable extends Migration
             $table->id();
             $table->string('name', 200);
             $table->integer('pay_per_item')->default(0);
-            $table->integer('project_id');
+            $table->bigInteger('project_id')->unsigned();
             $table->foreign('project_id')
                         ->on('projects')
                         ->references('id')

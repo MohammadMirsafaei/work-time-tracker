@@ -23,7 +23,7 @@ class ProjectFactory extends Factory
     {
         return [
             'name' => $this->faker->company,
-            'pay_per_hour' => $this->faker->random_int(15000,35000)
+            'pay_per_hour' => $this->faker->randomNumber(5)
         ];
     }
 }

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Project;
 use App\Models\TimeSheet;
 use Illuminate\Http\Request;
 
@@ -35,7 +36,17 @@ class TimeSheetController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = $request->validate([
+            'date' => 'required',
+            'start' => 'required',
+            'end' => 'required',
+        ]);
+
+        $sheet = new TimeSheet($data);
+        $sheet->project_id = $request->project;
+        $sheet->pay_per_hour = Project::find($request->project)->pay_per_hour;
+        $sheet->save();
+        return response()->json(['message' => 'time saved']);
     }
 
     /**
