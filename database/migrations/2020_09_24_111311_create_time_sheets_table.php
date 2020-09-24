@@ -15,6 +15,16 @@ class CreateTimeSheetsTable extends Migration
     {
         Schema::create('time_sheets', function (Blueprint $table) {
             $table->id();
+            $table->date('date');
+            $table->time('start');
+            $table->time('end');
+            $table->integer('pay_per_hour');
+            $table->bigInteger('project_id')->unsigned();
+            $table->foreign('project_id')
+                        ->on('projects')
+                        ->references('id')
+                        ->onDelete('cascade')
+                        ->onUpdate('cascade');
             $table->timestamps();
         });
     }
