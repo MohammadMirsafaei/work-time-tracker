@@ -1,3 +1,6 @@
 {
-    "/css/signin.min.css": "/css/signin.min.css"
+    "/css/main.min.css": "/css/main.min.css",
+    "/css/bootstrap.min.css": "/css/bootstrap.min.css",
+    "/fonts/fontawesome5-overrides.min.css": "/fonts/fontawesome5-overrides.min.css",
+    "/js/script.min.js": "/js/script.min.js"
 }

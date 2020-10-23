@@ -11,4 +11,9 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.styles('resources/css/signin.css', 'public/css/signin.min.css');
+mix.styles('resources/css/styles.min.css', 'public/css/main.min.css')
+    .styles('resources/css/bootstrap.min.css', 'public/css/bootstrap.min.css')
+    .styles('resources/fonts/fontawesome5-overrides.min.css', 'public/fonts/fontawesome5-overrides.min.css')
+    .copyDirectory('resources/images', 'public/images')
+    .copy('resources/js/script.min.js', 'public/js/script.min.js');
+
