@@ -25,4 +25,13 @@ class LoginController extends Controller
 
         return redirect()->back();
     }
+
+    public function logout(Request $request)
+    {
+        if(!Auth::check())
+            return redirect()->route('auth.login');
+
+        Auth::logout();
+        return redirect()->route('auth.login');
+    }
 }
