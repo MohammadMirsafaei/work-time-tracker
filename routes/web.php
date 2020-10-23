@@ -33,7 +33,7 @@ Route::group(['prefix' => 'dashboard', 'as' => 'dashboard.', 'middleware' => 'au
 
     Route::resource('/company', CompanyController::class);
 
-    
+
     Route::resource('/timeSheet', TimeSheetController::class);
 });
 
