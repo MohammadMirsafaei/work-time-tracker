@@ -253,3 +253,41 @@
             </div>
         </div>
 @endsection
+
+
+@section('scripts')
+<script>
+
+    $('select[name="company"]').change(function () {
+        let selected = $('select[name="company"] option:selected');
+        let project = $('select[name="project"]');
+        project.empty();
+        $.ajax({
+            url: '/dashboard/company/' + selected.val(),
+        })
+            .done(function (data) {
+
+                data.forEach(el => {
+                    project.append(`<option value="${el.id}">${el.name}</option>`);
+                });
+            });
+    });
+
+    $('#saveBtn').click(function(){
+                $.ajax({
+                    url: '/dashboard/timeSheet/',
+                    method: 'post',
+                    data: {
+                        "_token": "{{csrf_token()}}",
+                        "date": $('input[name="date"]').val(),
+                        "start": $('input[name="start"]').val(),
+                        "end": $('input[name="end"]').val(),
+                        "project": $('select[name="project"] option:selected').val(),
+                    }
+                })
+                .done(function(data){
+                    alert(data.message);
+                });
+            });
+</script>
+@endsection
