@@ -275,7 +275,7 @@
 
     $('#saveBtn').click(function(){
                 $.ajax({
-                    url: '/dashboard/timeSheet/',
+                    url: '/dashboard/timeSheet',
                     method: 'post',
                     data: {
                         "_token": "{{csrf_token()}}",
