@@ -5,13 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>TimeSheet Tracker</title>
-    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{mix('css/bootstrap.min.css')}}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.12.0/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="{{asset('fonts/fontawesome5-overrides.min.css')}}">
+    <link rel="stylesheet" href="{{mix('fonts/fontawesome5-overrides.min.css')}}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" href="{{asset('css/main.min.css')}}">
+    <link rel="stylesheet" href="{{mix('css/main.min.css')}}">
 </head>
 
 <body id="page-top">
@@ -62,7 +62,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.js"></script>
-    <script src="{{asset('js/script.min.js')}}"></script>
+    <script src="{{mix('js/script.min.js')}}"></script>
     @yield('scripts')
 </body>
 
