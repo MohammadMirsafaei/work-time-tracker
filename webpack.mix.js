@@ -17,3 +17,8 @@ mix.styles('resources/css/styles.min.css', 'public/css/main.min.css')
     .copyDirectory('resources/images', 'public/images')
     .copy('resources/js/script.min.js', 'public/js/script.min.js');
 
+if(mix.inProduction)
+{
+    mix.version();
+}
+

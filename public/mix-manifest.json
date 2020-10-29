@@ -1,6 +1,6 @@
 {
-    "/css/main.min.css": "/css/main.min.css",
-    "/css/bootstrap.min.css": "/css/bootstrap.min.css",
-    "/fonts/fontawesome5-overrides.min.css": "/fonts/fontawesome5-overrides.min.css",
-    "/js/script.min.js": "/js/script.min.js"
+    "/css/main.min.css": "/css/main.min.css?id=a820b37c9d0019d4c484",
+    "/css/bootstrap.min.css": "/css/bootstrap.min.css?id=167d3733d499464fe1d6",
+    "/fonts/fontawesome5-overrides.min.css": "/fonts/fontawesome5-overrides.min.css?id=efc9f7da67e38b107d16",
+    "/js/script.min.js": "/js/script.min.js?id=707348fd4a19f9a48933"
 }
